@@ -5,13 +5,15 @@ import './Like.css'
 const Like = () => {
     const [like, setLike] = useState(false)
     return (
-        <button className="" onClick={()=>setLike(!like)}>
+        <button onClick={() => setLike(!like)}>
             <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.8 }}
-                className="rounded bg-gray-500 p-1"
-            >{like?"❤":"🤍"}</motion.div>
-            
+                className="rounded p-0"
+            >
+                {like ? "💖" : "🤍"}
+            </motion.div>
+
         </button>
     )
 }
